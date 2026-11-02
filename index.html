@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabrielle Sunrise — сайт-визитка</title>
+<meta name="description" content="Психолог-полиграфист-маркетолог-верстак. Проекты, кожевенное дело и немного музыки :)">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Gabrielle Sunrise">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#191b20" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gabrielle Sunrise">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Gabrielle Sunrise — сайт-визитка">
+<meta property="og:description" content="Психолог-полиграфист-маркетолог-верстак. Проекты, кожевенное дело и немного музыки :)">
+<meta property="og:url" content="https://gabriellesunrise.com/">
+<meta property="og:image" content="https://gabriellesunrise.com/img/og-preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Сайт-визитка Gabrielle Sunrise: имя, специализации и фото автора">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+(function () {
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('gabrielle-theme'); } catch (e) { /* приватный режим */ }
+    var dark = saved === 'dark' || (saved !== 'light' &&
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-mode', dark ? 'dark' : 'light');
+
+    var h = new Date().getHours();
+    root.setAttribute('data-daypart',
+          h >= 5 && h < 12 ? 'morning'
+        : h >= 12 && h < 17 ? 'day'
+        : h >= 17 && h < 23 ? 'evening' : 'night');
+})();
+</script>
+</head>
+<body>
+    <nav class="topnav" aria-label="Основная навигация">
+    <div class="topnav-inner">
+        <button class="nav-burger" id="nav-burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14"/><path d="M5 12h14"/><path d="M5 16h14"/></svg>
+        </button>
+        <div class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="#about" data-scroll="about">Обо мне</a>
+        <a class="nav-link" href="#projects" data-scroll="projects">Проекты</a>
+        <a class="nav-link" href="#story" data-scroll="story">Про ИИ</a>
+        <a class="nav-link" href="#texts" data-scroll="texts">Тексты</a>
+        <a class="nav-link" href="#hobby" data-scroll="hobby">Хобби</a>
+        <!--<a class="nav-link" href="blog/">Блог</a>-->
+        <a class="nav-link" href="#contacts" data-scroll="contacts">Контакты</a>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">🌙</button>
+    </div>
+    </nav>
+
+    <header class="hero">
+        <svg class="hero-sky" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="hero-line" vector-effect="non-scaling-stroke" stroke-width="1.4" opacity=".55" stroke="#ffffff"
+                  d="M -80 90 C 26 58, 133 58, 240 90 C 346 122, 453 122, 560 90 C 666 58, 773 58, 880 90 C 986 122, 1093 122, 1200 90 C 1306 58, 1413 58, 1520 90">
+                <animate attributeName="d" dur="26s" begin="-4s" repeatCount="indefinite"
+                         values="M -80 90 C 26 58, 133 58, 240 90 C 346 122, 453 122, 560 90 C 666 58, 773 58, 880 90 C 986 122, 1093 122, 1200 90 C 1306 58, 1413 58, 1520 90;
+                                 M -80 90 C 26 122, 133 122, 240 90 C 346 58, 453 58, 560 90 C 666 122, 773 122, 880 90 C 986 58, 1093 58, 1200 90 C 1306 122, 1413 122, 1520 90;
+                                 M -80 90 C 26 58, 133 58, 240 90 C 346 122, 453 122, 560 90 C 666 58, 773 58, 880 90 C 986 122, 1093 122, 1200 90 C 1306 58, 1413 58, 1520 90"/>
+            </path>
+            <path class="hero-line" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".3" stroke="#ffffff"
+                  d="M -80 190 C 26 216, 133 216, 240 190 C 346 164, 453 164, 560 190 C 666 216, 773 216, 880 190 C 986 164, 1093 164, 1200 190 C 1306 216, 1413 216, 1520 190">
+                <animate attributeName="d" dur="30s" begin="-9s" repeatCount="indefinite"
+                         values="M -80 190 C 26 216, 133 216, 240 190 C 346 164, 453 164, 560 190 C 666 216, 773 216, 880 190 C 986 164, 1093 164, 1200 190 C 1306 216, 1413 216, 1520 190;
+                                 M -80 190 C 26 164, 133 164, 240 190 C 346 216, 453 216, 560 190 C 666 164, 773 164, 880 190 C 986 216, 1093 216, 1200 190 C 1306 164, 1413 164, 1520 190;
+                                 M -80 190 C 26 216, 133 216, 240 190 C 346 164, 453 164, 560 190 C 666 216, 773 216, 880 190 C 986 164, 1093 164, 1200 190 C 1306 216, 1413 216, 1520 190"/>
+            </path>
+            <path class="hero-line" vector-effect="non-scaling-stroke" stroke-width="2" opacity=".45" stroke="#ffffff"
+                  d="M -80 300 C 26 266, 133 266, 240 300 C 346 334, 453 334, 560 300 C 666 266, 773 266, 880 300 C 986 334, 1093 334, 1200 300 C 1306 266, 1413 266, 1520 300">
+                <animate attributeName="d" dur="20s" begin="-1s" repeatCount="indefinite"
+                         values="M -80 300 C 26 266, 133 266, 240 300 C 346 334, 453 334, 560 300 C 666 266, 773 266, 880 300 C 986 334, 1093 334, 1200 300 C 1306 266, 1413 266, 1520 300;
+                                 M -80 300 C 26 334, 133 334, 240 300 C 346 266, 453 266, 560 300 C 666 334, 773 334, 880 300 C 986 266, 1093 266, 1200 300 C 1306 334, 1413 334, 1520 300;
+                                 M -80 300 C 26 266, 133 266, 240 300 C 346 334, 453 334, 560 300 C 666 266, 773 266, 880 300 C 986 334, 1093 334, 1200 300 C 1306 266, 1413 266, 1520 300"/>
+            </path>
+            <path class="hero-line" vector-effect="non-scaling-stroke" stroke-width="1.2" opacity=".35" stroke="#ffffff"
+                  d="M -80 410 C 26 436, 133 436, 240 410 C 346 384, 453 384, 560 410 C 666 436, 773 436, 880 410 C 986 384, 1093 384, 1200 410 C 1306 436, 1413 436, 1520 410">
+                <animate attributeName="d" dur="32s" begin="-13s" repeatCount="indefinite"
+                         values="M -80 410 C 26 436, 133 436, 240 410 C 346 384, 453 384, 560 410 C 666 436, 773 436, 880 410 C 986 384, 1093 384, 1200 410 C 1306 436, 1413 436, 1520 410;
+                                 M -80 410 C 26 384, 133 384, 240 410 C 346 436, 453 436, 560 410 C 666 384, 773 384, 880 410 C 986 436, 1093 436, 1200 410 C 1306 384, 1413 384, 1520 410;
+                                 M -80 410 C 26 436, 133 436, 240 410 C 346 384, 453 384, 560 410 C 666 436, 773 436, 880 410 C 986 384, 1093 384, 1200 410 C 1306 436, 1413 436, 1520 410"/>
+            </path>
+            <path class="hero-line" vector-effect="non-scaling-stroke" stroke-width="1.5" opacity=".5" stroke="#ffffff"
+                  d="M -80 520 C 26 490, 133 490, 240 520 C 346 550, 453 550, 560 520 C 666 490, 773 490, 880 520 C 986 550, 1093 550, 1200 520 C 1306 490, 1413 490, 1520 520">
+                <animate attributeName="d" dur="28s" begin="-7s" repeatCount="indefinite"
+                         values="M -80 520 C 26 490, 133 490, 240 520 C 346 550, 453 550, 560 520 C 666 490, 773 490, 880 520 C 986 550, 1093 550, 1200 520 C 1306 490, 1413 490, 1520 520;
+                                 M -80 520 C 26 550, 133 550, 240 520 C 346 490, 453 490, 560 520 C 666 550, 773 550, 880 520 C 986 490, 1093 490, 1200 520 C 1306 550, 1413 550, 1520 520;
+                                 M -80 520 C 26 490, 133 490, 240 520 C 346 550, 453 550, 560 520 C 666 490, 773 490, 880 520 C 986 550, 1093 550, 1200 520 C 1306 490, 1413 490, 1520 520"/>
+            </path>
+        </svg>
+    <div class="hero-inner">
+        <div class="avatar-wrap">
+            <img class="avatar-img" src="img/avatar.png" alt="Gabrielle Sunrise" width="230" height="230">
+        </div>
+        <div class="hero-text">
+            <h1 class="hero-title">Привет! Я — Габи (Gabrielle Sunrise)</h1>
+            <p class="hero-tagline">
+                <strong>Психолог · Полиграфист · Маркетолог · Верстак :)</strong>
+            </p>
+            <p class="hero-tagline">Более 18 лет в интернете под этим ником, 5 лет в полиграфии и 7+ в IT.</p>
+            <p class="hero-tagline">Искренне считаю, что работа должна быть любимой.</p>
+            <p class="hero-tagline">Добро пожаловать на мою страничку!</p>
+        </div>
+    </div>
+    </header>
+
+    <div class="wrap">
+
+    <section class="section about" id="about">
+        <h2>О себе</h2>
+        <div class="story-text">
+            <div class="about-full hidden">
+                <h3>🎓 Образование</h3>
+            <p>
+                В 2009 году окончила Институт психологии и педагогики ЧелГУ, квалификация — психолог, преподаватель психологии. В профессии после окончания универа себя не видела, так как банально не хватало жизненного опыта — мне кажется, он в ней важен. Тем не менее интерес к психологии и психиатрии со мной до сих пор.
+            </p>
+            <h3>💾 Старт</h3>
+            <p>
+                Моя первая работа была «своего рода IT»: я создавала электронные учебники в Dreamweaver. Но нет, они не выкладывались в интернет. Они выдавались студентам-дистанционщикам (коих тогда было совсем немного) на дисках. В целом мне нравилось. Там я начала вникать в HTML, CSS и немного в JS.
+            </p>
+            <h3>🖨️ Полиграфия</h3>
+            <p>
+                Потом работала в типографиях — на разных должностях и часто совмещая в себе функции нескольких специалистов: оператор копицентра, менеджер, дизайнер, в итоге — мастер-технолог. Предпечатная подготовка, печать, постпечатка. В общем, знаю, чем отличаются RGB и CMYK, почему на цифровой машине может полосить синий и как собрать календарь. 
+            </p>
+            <p class="pull">
+                В этот период случилась забавная трансформация восприятия из «Это — классное, поэтому будет моим» в «Моё — потому и классное» (называйте это мудростью или смирением, кому как ближе 😊). Помню, как по весне, когда только потеплело и мы работали с открытой дверью на улицу, ловила ощущение: «Блин, весна, солнце, и я занимаюсь тем, что мне нравится. Чё мне ещё надо?».
+            </p>
+            <h3>💻 IT</h3>
+            <p>
+                А затем были 7+ лет в одной IT-компании. Пришла туда помощником маркетолога/SEO-специалиста. Позже стала маркетологом с двумя помощниками. В процессе работы я понемногу ковыряла верстку руками и по-хорошему завидовала разработчикам. Они казались страшно умными людьми, а написание кода — чистой магией. Короче, очень хотелось причастности к этому. В итоге мы договорились о горизонтальном переходе. Так я «верстанулась» и занималась уже преимущественно фронтендом.
+            </p>
+            <p>
+                Помню, как однажды менеджер увидела у меня на мониторе простыню кода в IDE и искренне выдала: «Серьёзно?! Тебе вот это нравится больше? Ты же девочка!». Я тогда выпала, конечно. 
+            </p>
+            <p class="pull">
+                В какой-то момент я поймала себя на мысли: а что бы я делала, если бы знала, что живу последнюю неделю? Да то же самое, что и сейчас. 
+            </p>
+            <p>
+                Однако в конце 2023 года правила игры изменились: появились нормально работающие нейросети, и код на JS за меня стали писать они. Потому что быстрее и лучше. И проще, да, ибо зачем делать руками то, что можно не делать руками?
+            </p>
+            <p>
+                Это сломало главную шестерёнку: исчез кайф преодоления, когда часами бьёшься над задачей, переписываешь скрипт, психуешь, а потом — бах, заработало! — и ловишь чистый восторг.
+            </p>
+            <p>
+                К лету 2026 объём работы в компании просел, и мне предложили перейти на почасовую оплату. Сидеть без реальной практики в ожидании задач мне не хотелось, поэтому я уволилась.
+            </p>
+
+            <div class="here-marker">📍 И вот — <em>мы находимся здесь</em>&nbsp;:)</div>
+
+            <p>
+                Я привыкла работать вдолгую, поэтому сейчас ищу нормальную работу на постоянку. Главный критерий — чтобы в задачах был практический смысл, а я видела осязаемый результат того, что делаю.
+            </p>
+
+            <h3>«Ничего личного, просто бизнес»</h3>
+            <p>
+                В любом бизнесе дофига личного, ведь его делают люди. Профессиональный рост и оплата труда — это история про самоуважение, а команды, совпадающие по вайбу, работают в разы эффективнее, чем не совпадающие. Совместная деятельность сближает, и это нормально. Я до сих пор тепло общаюсь с некоторыми коллегами с прошлых мест — для меня это лучший показатель того, что в процессе мы оставались людьми, а не просто винтиками в системе.
+            </p>
+
+            <h3>Какая я в работе:</h3>
+            <ul class="work-list">
+                <li><strong>Говорю «словами через рот».</strong> Если вижу нестыковку в задаче, кривой процесс или откровенный абсурд — не буду молча закатывать глаза и делать «для галочки». Подсвечу узкое место и предложу, как сделать нормально.</li>
+                <li><strong>Не боюсь изменений.</strong> Быстро подстраиваюсь под новые реалии, пробую незнакомые подходы и оптимизирую то, что работает криво.</li>
+                <li><strong>Если задача требует концентрации — думаю под музыку.</strong> Обещаю не включать Киркорова на весь опенспейс :)</li>
+            </ul>
+
+            <h3>
+                Кого я ищу:
+            </h3>
+            <p>
+                Людей, которые делают понятный продукт или услугу, уважают чужой труд и умеют разговаривать прямо. Мне важны прозрачные договоренности, автономия и здоровая атмосфера.
+            </p>
+            <p>
+                <em>Маленький, но важный дисклеймер для офисного формата: если в вашей команде принято работать в кромешной темноте с зашторенными окнами — давайте сразу сэкономим друг другу время, я так не могу :)</em>
+            </p>
+            <p>
+                Если вам откликается мой подход — буду рада <a href="#contacts" data-scroll="contacts">пообщаться подробнее</a>.
+            </p>
+            </div>
+            <div class="about-short">
+                <ul class="work-list">
+                    <li>
+                        <strong>Диплом психфака,</strong> который помогает понимать людей, а не ставить диагнозы.
+                    </li>
+                    <li>
+                        <strong>Руки из плеч:</strong> знаю, как поменять фотобарабан на цифре, собрать брошюру или установить люверсы на баннер.
+                    </li>
+                    <li>
+                        <strong>Понимаю изнанку сайтов:</strong> от метатегов и Schema.org до фронтенда. Писала код руками, пока не пришёл ИИ.
+                    </li>
+                    <li>
+                        <strong>В работе:</strong> говорю «словами через рот», не боюсь нового и не умею работать в темноте.
+                    </li>
+                </ul>
+                <button class="btn btn-solid" id="about-full-toggle">Полная версия (~ 2 минуты) ↓</button>
+            </div>
+        </div>
+    </section>
+    <section class="section band" id="projects">
+    <h2>Мои пет-проекты</h2>
+    <p class="section-note">Эти три проекта создавались в помощь контент-менеджеру и мне самой: чтобы заполнять и переносить контент на сайты было быстрее и проще. Ну и мало ли, может ещё кто наткнётся на GitHub :)</p>
+    <div class="cards">
+        <div class="card">
+        <h3>Очиститель HTML</h3>
+        <p class="card-sub">
+            Я преследовала 2 цели:
+        </p>
+        <ol>
+            <li>
+                Некоторые поля в админке, на тот момент предназначенные для вывода микроразметки Schema.org в статьях блога и на других страницах, предполагали отсутствие HTML-тегов в их содержимом. Чтобы не удалять теги из готовой статьи вручную, были созданы функция и кнопка «Удалить все теги».
+            </li>
+            <li>
+                Также периодически возникала необходимость переноса контента со старого сайта клиента на новый. Сподручнее делать это, копируя имеющийся HTML-код, а не переделывая форматирование текста вручную. Для того чтобы удалять из такого кода всё ненужное, были созданы остальные функции и кнопки.
+            </li>
+        </ol>
+        <div class="card-links">
+            <a class="btn btn-solid" href="https://gabriellesunrise.github.io/tags-del-script/" target="_blank" rel="noopener noreferrer">Сайт ↗</a>
+            <a class="btn" href="https://github.com/GabrielleSunrise/tags-del-script" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <h3>Конвертер текста в HTML + редактор</h3>
+        <p class="card-sub">
+            Кто сталкивался с визуальным редактором Битрикса, тот в курсе, что расстановка тегов через него не всегда работает корректно. Особенно если копировать текст прямо из текстового редактора или Google Docs.
+        </p>
+        <p class="card-sub">
+            Данный проект был создан для решения этой проблемы.
+        </p>
+        <div class="card-links">
+            <a class="btn btn-solid" href="https://gabriellesunrise.github.io/improve-html-from-converter/" target="_blank" rel="noopener noreferrer">Сайт ↗</a>
+            <a class="btn" href="https://github.com/GabrielleSunrise/improve-html-from-converter" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+        </div>
+
+        <div class="card">
+        <h3>Генератор стандартных блоков</h3>
+        <p class="card-sub">
+            Однажды я уходила в очередной отпуск... И знала, что в предыдущие разы верстачные задачи в этот период летели в программистов. Мне потом докладывали, как они страдали :)
+        </p>
+        <p class="card-sub">
+            И вот по приколу на такой случай был создан этот генератор. Изначально там было всего 2 типа блоков: горизонтальные и вертикальные. Разрастался и обзаводился возможностью заполнять контент он уже потом.
+        </p>
+        <div class="card-links">
+            <a class="btn btn-solid" href="https://gabriellesunrise.github.io/simple-blocks/" target="_blank" rel="noopener noreferrer">Сайт ↗</a>
+            <a class="btn" href="https://github.com/GabrielleSunrise/simple-blocks" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section" id="story">
+    <h2>Про ИИ</h2>
+    <div class="story-text">
+        <p>
+            В какой-то момент я захотела прикрутить к проекту «Генератор стандартных блоков» бэкенд и взялась за изучение C#. А потом осознала: мой основной стек — JavaScript, и даже на нём я руками не пишу код с осени 2023 года. Кому нужен синтаксис, когда все вайбкодят?
+        </p>
+        <p>
+            Раньше мой опыт с нейросетями ограничивался чатами: Copilot в Битрикс24, ChatGPT и Gemini. В основном Gemini. 
+        </p>
+        <p>
+            На этом проекте я впервые пощупала агентскую разработку. Использовала плагин Cline для VSCode (модели GLM и DeepSeek), моё тестирование, и Gemini в качестве консультанта.
+        </p>
+        <p>
+            Инженерный челлендж: я не использовала платные Claude или Codex, поставив себе задачу собрать всё на условно-бесплатных и Open Source решениях.    
+        </p>
+        <p>
+            Авторизацию сделала максимально приватной — по сид-фразе, без e-mail и паролей. Это позволило вообще не собирать персональные данные и сделать вход предельно простым.
+        </p>
+    </div>
+    <div class="links-row">
+        <a class="btn btn-solid" href="https://gabriellesunrise.github.io/simple-blocks-with-auth/" target="_blank" rel="noopener noreferrer">Сайт ↗</a>
+        <a class="btn" href="https://github.com/GabrielleSunrise/simple-blocks-backend" target="_blank" rel="noopener noreferrer">Бэкенд ↗</a>
+        <a class="btn" href="https://github.com/GabrielleSunrise/simple-blocks-with-auth" target="_blank" rel="noopener noreferrer">Фронтенд ↗</a>   
+    </div>
+    </section>
+
+    <section class="section band" id="texts">
+    <h2>Тексты</h2>
+    <div class="story-text">
+        <p>
+            В период работы маркетологом в мои задачи входило ведение блога компании, в том числе я сама писала тексты (хотя копирайтеры у нас тоже были). Мы просто и понятно рассказывали про интернет-маркетинг, попутно собирая органический SEO-трафик по инфозапросам. Кстати, моя <a href="https://nextype.ru/blog/internet-marketing/filosofiya-brenda-chto-ona-vkl/" target="_blank" rel="noopener noreferrer">статья про философию бренда</a>, полная воды и ключевых слов, долгое время висела в ТОП-1 Гугла :)
+        </p>
+        <p>
+            Вот ещё несколько примеров таких материалов:
+        </p>
+    </div>
+    <div class="text-cards">
+        <a class="text-card" href="https://nextype.ru/blog/internet-marketing/kak-otvetit-na-negativnyy-otzy/" target="_blank" rel="noopener noreferrer">
+        <span class="text-card-title">Как ответить на негативный отзыв, чтобы привести новых клиентов?</span>
+        <span class="text-card-meta">nextype.ru · 02.10.2020 ↗</span>
+        </a>
+        <a class="text-card" href="https://nextype.ru/blog/internet-marketing/pyat-rasprostranennykh-oshibok/" target="_blank" rel="noopener noreferrer">
+        <span class="text-card-title">Пять распространённых ошибок в создании интерфейса сайта</span>
+        <span class="text-card-meta">nextype.ru · 17.12.2020 ↗</span>
+        </a>
+        <a class="text-card" href="https://nextype.ru/blog/internet-marketing/nazvaniya-tovarov-v-internet-m/" target="_blank" rel="noopener noreferrer">
+        <span class="text-card-title">Названия товаров в интернет-магазине – какими они должны быть?</span>
+        <span class="text-card-meta">nextype.ru · 17.07.2020 ↗</span>
+        </a>
+    </div>
+    </section>
+
+    <section class="section hobby" id="hobby">
+    <h2>Хобби</h2>
+    
+    <h3>Кожевенное дело</h3>
+    <p class="section-note">
+        Люблю делать что-то осязаемое и симпатичное. Пара примеров работ:
+    </p>
+
+    <div class="gallery">
+        <div class="stage" id="g-stage">
+        <div class="slide is-active"><picture><source type="image/webp" srcset="img/battery-case.webp 1944w, img/battery-case-1500.webp 1500w, img/battery-case-972.webp 972w" sizes="(max-width: 1020px) calc(100vw - 48px), 972px"><img src="img/battery-case.jpg" width="1944" height="1215" alt="Футляр для аккумуляторов из кожи" loading="lazy" decoding="async" draggable="false"></picture><span class="slide-tag">Футляр для аккумуляторов</span></div>
+        <div class="slide"><picture><source type="image/webp" srcset="img/battery-case2.webp 1944w, img/battery-case2-1500.webp 1500w, img/battery-case2-972.webp 972w" sizes="(max-width: 1020px) calc(100vw - 48px), 972px"><img src="img/battery-case2.jpg" width="1944" height="1215" alt="Футляр для аккумуляторов с растительным тиснением" loading="lazy" decoding="async" draggable="false"></picture><span class="slide-tag">Футляр для аккумуляторов</span></div>
+        <div class="slide"><picture><source type="image/webp" srcset="img/plague-doctor-mask.webp 1944w, img/plague-doctor-mask-1500.webp 1500w, img/plague-doctor-mask-972.webp 972w" sizes="(max-width: 1020px) calc(100vw - 48px), 972px"><img src="img/plague-doctor-mask.jpg" width="1944" height="1215" alt="Маска чумного доктора с красным стеклом" loading="lazy" decoding="async" draggable="false"></picture><span class="slide-tag">Маска чумного доктора :)</span></div>
+        <div class="slide"><picture><source type="image/webp" srcset="img/plague-doctor-mask2.webp 1944w, img/plague-doctor-mask2-1500.webp 1500w, img/plague-doctor-mask2-972.webp 972w" sizes="(max-width: 1020px) calc(100vw - 48px), 972px"><img src="img/plague-doctor-mask2.jpg" width="1944" height="1215" alt="Маска чумного доктора ручной работы" loading="lazy" decoding="async" draggable="false"></picture><span class="slide-tag">Маска чумного доктора</span></div>
+        <div class="slide"><picture><source type="image/webp" srcset="img/card-holders.webp 1944w, img/card-holders-1500.webp 1500w, img/card-holders-972.webp 972w" sizes="(max-width: 1020px) calc(100vw - 48px), 972px"><img src="img/card-holders.jpg" width="1944" height="1215" alt="Кардхолдеры из кожи" loading="lazy" decoding="async" draggable="false"></picture><span class="slide-tag">Кардхолдеры</span></div>
+        <div class="slide"><picture><source type="image/webp" srcset="img/card-holders2.webp 1944w, img/card-holders2-1500.webp 1500w, img/card-holders2-972.webp 972w" sizes="(max-width: 1020px) calc(100vw - 48px), 972px"><img src="img/card-holders2.jpg" width="1944" height="1215" alt="Кардхолдеры с перфорацией" loading="lazy" decoding="async" draggable="false"></picture><span class="slide-tag">Кардхолдеры</span></div>       
+        <button class="g-btn g-prev" id="g-prev" type="button" aria-label="Предыдущее фото"><svg class="g-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3 L7 12 L17 21" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="g-btn g-next" id="g-next" type="button" aria-label="Следующее фото"><svg class="g-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3 L17 12 L7 21" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        <div class="g-dots" id="g-dots"></div>
+    </div>
+    <p class="section-note">
+        На данный момент интерес постепенно смещается в сторону изготовления обуви. 
+    </p>
+
+    <h3>Музыка</h3>
+    <p class="section-note">Музыкальными инструментами не владею, петь не умею тоже :) В целом, то, что один код пишет другой код, а человек пишет стихи — это вроде как гармонично. А вот то, что стихи и музыку теперь тоже фигачит код — это отдельный вид иронии, однако вот :) Несколько моих сгенеренных треков — можно послушать прямо здесь:</p>
+    <div class="tracklist">
+        <div class="track">
+            <div class="track-head">
+            <span class="track-title">Velvet Light</span>
+            <span class="track-meta">Suno AI · Futurepop</span>
+            </div>
+            <audio controls preload="none" src="audio/velvet-light.mp3"></audio>
+        </div>
+        <div class="track">
+            <div class="track-head">
+            <span class="track-title">Licht im Schatten</span>
+            <span class="track-meta">Suno AI · Darkwave</span>
+            </div>
+            <audio controls preload="none" src="audio/licht-im-schatten.mp3"></audio>
+        </div>      
+        <div class="track">
+            <div class="track-head">
+            <span class="track-title">Hinter der Grenze des Zögerns</span>
+            <span class="track-meta">Suno AI · Darkwave/EBM/Industrial</span>
+            </div>
+            <audio controls preload="none" src="audio/hinter-der-grenze-des-zogerns.mp3"></audio>
+        </div>        
+    </div>
+    <p class="track-credit">Composed with Suno AI</p>
+
+    <div class="links-row music">
+        <a class="btn btn-solid" href="https://suno.com/@gabriellesunrise" target="_blank" rel="noopener noreferrer">suno.com/@gabriellesunrise ↗</a>
+    </div>
+
+    <h3>Лонгборд</h3>
+    <div class="story-text">      
+        <p>
+            Как скейт, только длинный :) Без трюков, просто катаюсь.
+        </p>
+        <p>
+            В прошлом сезоне также открыла для себя сапборд, очень зашло.
+        </p>    
+        <p>
+            Ну и вне конкурса — <b>ремонт</b>. Моё самое нелюбимое хобби последнего времени, но такое типичное для человеков.
+        </p>
+    </div>
+    </section>
+
+    <section class="section cta" id="contacts">
+    <h2>Контакты</h2>
+    <p>
+        Сейчас я в поиске постоянной работы. Чувствуете, что мы найдем общий язык? Прекрасно! Я на связи.
+    </p>
+    <div class="links-row">
+        <a class="btn" href="mailto:me@gabriellesunrise.com">
+        <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Почта
+        </a>
+        <a class="btn" href="https://t.me/GabriSunrise" target="_blank" rel="noopener noreferrer">
+        <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2 11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Telegram
+        </a>
+        <a class="btn" href="https://vk.ru/gabrielle_sunrise" target="_blank" rel="noopener noreferrer">
+        <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></rect>
+  <path d="M6.5 8.5c.5 3.5 2.5 7 5 7V8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M17.5 8.5c-2.5 0-4.2 1.5-6 3.5m1 0c1.8 1.2 3.2 2.3 4.5 3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+        VK
+        </a>
+    </div>
+    </section>
+
+    </div>
+
+    <footer class="wrap footer">
+    <small>Sincerely yours, Gabrielle Sunrise</small>
+    <a class="footer-mail" href="mailto:me@gabriellesunrise.com">me@gabriellesunrise.com</a>
+    </footer>
+
+    <button class="to-top" id="to-top" type="button" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m5 12 7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Наверх
+    </button>
+    <button class="float-toggle hidden" id="about-float-toggle">Свернуть ↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
